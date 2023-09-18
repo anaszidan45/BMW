@@ -1,0 +1,420 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    background: #eeee;
+}
+
+.btn {
+    background-color: rgb(18, 18, 245);
+    color: #fff;
+    padding: 10px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: 400;
+    font-size: 15px;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo {
+    width: 100px;
+    padding-left: 25px;
+    padding-top: 10px;
+}
+
+header .navbar a {
+    padding-left: 15px;
+    margin-right: 15px;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 400;
+    color: black;
+} 
+
+header .navbar a:hover {
+    color: rgb(18, 18, 245);
+}
+
+.form button {
+    border: none;
+    background: none;
+    color: #8b8ba7;
+}
+  /* styling of whole input container */
+.form {
+    --timing: 0.3s;
+    --width-of-input: 200px;
+    --height-of-input: 40px;
+    --border-height: 2px;
+    --input-bg: #fff;
+    --border-color: #2f2ee9;
+    --border-radius: 30px;
+    --after-border-radius: 1px;
+    position: relative;
+    width: var(--width-of-input);
+    height: var(--height-of-input);
+    display: flex;
+    align-items: center;
+    padding-inline: 0.8em;
+    border-radius: var(--border-radius);
+    transition: border-radius 0.5s ease;
+    background: var(--input-bg,#fff);
+    margin-right: 50px;
+}
+  /* styling of Input */
+.input {
+    font-size: 0.9rem;
+    background-color: transparent;
+    width: 100%;
+    height: 100%;
+    padding-inline: 0.5em;
+    padding-block: 0.7em;
+    border: none;
+}
+  /* styling of animated border */
+.form:before {
+    content: "";
+    position: absolute;
+    background: var(--border-color);
+    transform: scaleX(0);
+    transform-origin: center;
+    width: 100%;
+    height: var(--border-height);
+    left: 0;
+    bottom: 0;
+    border-radius: 1px;
+    transition: transform var(--timing) ease;
+}
+  /* Hover on Input */
+.form:focus-within {
+    border-radius: var(--after-border-radius);
+}
+
+input:focus {
+    outline: none;
+}
+  /* here is code of animated border */
+.form:focus-within:before {
+    transform: scale(1);
+}
+  /* styling of close button */
+  /* == you can click the close button to remove text == */
+.reset {
+    border: none;
+    background: none;
+    opacity: 0;
+    visibility: hidden;
+}
+  /* close button shown when typing */
+input:not(:placeholder-shown) ~ .reset {
+    opacity: 1;
+    visibility: visible;
+}
+  /* sizing svg icons */
+.form svg {
+    width: 17px;
+    margin-top: 3px;
+}
+/* HOME START */
+#home {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px 8% 0;
+}
+
+#home .home-content {
+    max-width: 630px;
+    margin-top: 15rem;
+}
+
+#home .home-content h1 {
+    font-size: 50px;
+    line-height: 1.2;
+    color: rgb(18, 18, 245);
+}
+
+#home .home-content h3 {
+    color: rgb(146, 0, 0);
+    padding-left: 2rem;
+    margin-top: 0.5rem;
+}
+
+#home .home-content p {
+    margin-top: 1rem;
+    letter-spacing: 1px;
+    margin-bottom: 1.5rem;
+    font-weight: 400;
+}
+
+.btn:hover {
+    color: black;
+    background: #f7d385;
+    font-weight: 400;
+    font-size: 15px;
+}
+
+#home .home-img img {
+    position: absolute;
+    top: 250px; left: 870px; 
+    width: 750px;
+}
+
+/* ABOUT START */
+
+#about {
+    margin-top: 250px;
+} 
+
+#about .about-content h3 {
+    padding-left: 750px;
+    padding-top: 15px;
+    font-size: 28px;
+    font-weight: 500;
+    margin-bottom: 40px;
+}
+
+#about .about-content h3 span {
+    color: blue;
+}
+
+#about .about-content p {
+    font-size: 18px;
+    font-weight: 400;
+    max-width: 750px;
+    padding-left: 60px;
+    letter-spacing: 1.5px;
+    line-height: 2rem;
+    padding-bottom: 30px;
+}
+/* ABOUT END */
+
+/* OUR CARS START */
+
+.project-title h2 {
+    display: flex;
+    justify-content: center;
+    padding-top: 10rem;
+    color: blue;
+}
+
+.project-title p {
+    display: flex;
+    justify-content: center;
+    padding-top: 30PX;
+    padding-bottom: 50PX;
+    color: black;
+    font-weight: 500;
+    }
+
+.grid {
+    display: grid;
+    width: 100em;
+    grid-gap: 6rem;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    align-items: start;
+    margin-left: 40px;
+    margin-top: 10rem;
+}
+
+.grid-item {
+    background-color: #fff;
+    border-radius: 0.4rem;
+    overflow: hidden;
+    box-shadow: 0 3rem 6rem rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.grid-item:hover {
+    transform: translateY(-0.5%);
+    box-shadow: 0 4rem 8rem rgba(0, 0, 0, 0.5);
+}
+
+.card-img {
+    display: block;
+    width: 100%;
+    height: 20rem;
+    object-fit: cover;
+}
+
+.card-content {
+    padding: 3rem;
+}
+
+.card-header {
+    font-size: 3em;
+    font-weight: 500;
+    color: black;
+    margin-bottom: 1.5rem;
+}
+
+.card-text {
+    font-size: 1.6rem;
+    letter-spacing: 0.1rem;
+    line-height: 1.7;
+    color: #3d3d3d;
+    margin-bottom: 2.5rem;
+}
+
+
+.button {
+    position: relative;
+    background-color: transparent;
+    color: #e8e8e8;
+    font-size: 17px;
+    font-weight: 600;
+    border-radius: 10px;
+    width: 150px;
+    height: 60px;
+    border: none;
+    text-transform: uppercase;
+    cursor: pointer;
+    overflow: hidden;
+    box-shadow: 0 10px 20px rgba(51, 51, 51, 0.2);
+    transition: all 0.3s cubic-bezier(0.23, 1, 0.320, 1);
+}
+
+.button::before {
+    content: "BUY NOW";
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    background: linear-gradient(135deg,#7b4397,#dc2430 );
+    transform: translate(0%,90%);
+    z-index: 99;
+    position: relative;
+    transform-origin: bottom;
+    transition: all 0.6s cubic-bezier(0.23, 1, 0.320, 1);
+}
+
+.button::after {
+    content: "BUY";
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #333;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    transform-origin: top;
+    transform: translate(0%,-100%);
+    transition: all 0.6s cubic-bezier(0.23, 1, 0.320, 1);
+}
+
+.button:hover::before {
+    transform: translate(0%,0%);
+}
+
+.button:hover::after {
+    transform: translate(0%,-200%);
+}
+
+.button:focus {
+    outline: none;
+}
+
+.button:active {
+    scale: 0.95;
+}
+
+
+/* OUR CARS EMD */
+
+
+/* responsive */
+
+@media (max-width: 600px) {
+    header .logo {
+        width: 80px;
+    }
+
+    header .navbar a {
+        padding-left: 2px;
+        font-size: 16;
+    }
+
+    .form {
+        position: absolute;
+        left: 500px;
+        
+    }
+
+    #home .home-content h1 {
+        margin-right: 30px;
+    }
+
+    #home .home-img img {
+        position: absolute;
+        top: 380px; left: 250px;
+        width: 150px;
+    }
+
+    #about .about-content h3 {
+        padding-left: 150px;
+        font-size: 20px;
+    }
+
+    #about .about-content p {
+        padding-left: 20px;
+    }
+
+    .project-title h2 {
+        padding-top: 4rem;
+        font-size: 24px;
+    }
+
+    .project-title p {
+        padding-bottom: 20px;
+        font-size: 13px;
+    }
+
+    .grid {
+        width: 1em;
+        grid-gap: 2rem;
+        margin-right: 40rem;
+        margin-left: 10px;
+    }
+
+    .card-img {
+        width: 100%;
+        height: 15rem;
+    }
+
+    .card-content {
+        padding: 2rem;
+    }
+
+    .card-header {
+        font-size: 1.5em;
+        font-weight: 400;
+        margin-bottom: 0.75rem;
+        padding-right: 30px;
+    }
+
+    .card-text {
+        font-size: 1rem;
+        margin-bottom: 1.5rem;
+        padding-right: 25px;
+    }
+
+}
+
+
+
